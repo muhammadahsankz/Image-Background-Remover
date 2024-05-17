@@ -1,7 +1,7 @@
 import 'package:http/http.dart';
 
 class RemoveBgApi {
-  static const apiKey = 'L9GQJsfTLCagUcRWwiHvuR2P';
+  static const apiKey = '';
   static var baseUrl = Uri.parse('https://api.remove.bg/v1.0/removebg');
 
   static removebg(String imagePath) async {
