@@ -201,10 +201,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
   downloadImage() async {
     var permission = await Permission.storage.request();
-    var folderName = 'ImageBackgroundRemover';
-    var fileName = '${DateTime.now().microsecond}.png';
+    var folderName = 'Image Background Remover';
+    var fileName = '${DateTime.now().microsecondsSinceEpoch}.png';
     if (permission.isGranted) {
-      final directory = Directory('storage/emulated/0/$folderName/');
+      final directory = Directory('storage/emulated/0/download/$folderName');
       if (!await directory.exists()) {
         await directory.create(recursive: true);
       }
